@@ -1,2 +1,2 @@
 # vCenter-PowerShell
-Various useful vCenter scripts I've used over the years.
+Various VMware vCenter PowerCLI scripts I've created or used over the years.
