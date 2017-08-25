@@ -58,7 +58,8 @@ function Get-vCenterSnapshot {
 
             # Find snapshots
             Write-Verbose "Finding all snapshots in $($vCenter)..."
-            $Snapshots = Get-View -Server $vCenter -ViewType VirtualMachine -Property Name, Snapshot -Filter @{ 'Snapshot' = '' } | ForEach-Object { Get-VM -Server $vCenter -Id $_.MoRef | Get-Snapshot }
+            $Snapshots = Get-View -Server $vCenter -ViewType VirtualMachine -Property Name, Snapshot -Filter @{ 'Snapshot' = '' } |
+                ForEach-Object { Get-VM -Server $vCenter -Id $_.MoRef | Get-Snapshot }
 
             # Output to pipeline
             foreach ($Snapshot in $Snapshots) {

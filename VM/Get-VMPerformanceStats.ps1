@@ -62,7 +62,7 @@ foreach ($VM in $VMs) {
 
     $Groups = $StatResults | Group-Object -Property {$_.MetricId}
     $Row = $Groups | ForEach-Object {
-        New-Object PSObject -Property @{
+        [pscustomobject] @{
             Description  = $_.Group[0].Description
             Entity       = $_.Group[0].Entity
             EntityId     = $_.Group[0].EntityId

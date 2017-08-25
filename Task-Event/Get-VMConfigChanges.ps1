@@ -14,7 +14,6 @@
 .EXAMPLE
   PS> Get-VMConfigChanges -vm $VM -hours 8
 #>
-
 Function Get-VMConfigChanges {
     param($vm, $hours = 8)
 
